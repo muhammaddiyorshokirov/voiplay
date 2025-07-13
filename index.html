@@ -1,1 +1,1097 @@
 
+
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiPlay.uz - O&#039;zbek tilida Anime va Seriallar</title>
+    <meta name="description" content="O&#039;zbek tilida eng yaxshi anime va seriallarni HD sifatda tomosha qiling. Bepul va pullik kontentlar, yangi epizodlar har kuni!">
+    <meta name="keywords" content="anime, serial, multfilm, o&#039;zbek tilida, HD, online tomosha, VoiPlay">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://voiplay.uz">
+    <meta property="og:title" content="VoiPlay.uz - O&#039;zbek tilida Anime va Seriallar">
+    <meta property="og:description" content="O&#039;zbek tilida eng yaxshi anime va seriallarni HD sifatda tomosha qiling. Bepul va pullik kontentlar, yangi epizodlar har kuni!">
+    <meta property="og:image" content="https://voiplay.uz/assets/images/social-banner.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://voiplay.uz">
+    <meta property="twitter:title" content="VoiPlay.uz - O&#039;zbek tilida Anime va Seriallar">
+    <meta property="twitter:description" content="O&#039;zbek tilida eng yaxshi anime va seriallarni HD sifatda tomosha qiling. Bepul va pullik kontentlar, yangi epizodlar har kuni!">
+    <meta property="twitter:image" content="https://voiplay.uz/assets/images/social-banner.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'voiplay-primary': '#E50914',
+                        'voiplay-primary-dark': '#B00710',
+                        'voiplay-secondary': '#221F1F',
+                        'voiplay-accent': '#F5F5F1',
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "VoiPlay.uz",
+        "url": "https://voiplay.uz",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://voiplay.uz/search.php?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+</head>
+<body class="bg-voiplay-secondary text-white font-sans min-h-screen flex flex-col">
+    
+<nav class="navbar fixed w-full z-50 transition-all duration-300 bg-transparent">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex items-center flex-shrink-0">
+                <a href="/" class="flex items-center">
+                    <img src="https://cdn-images-1.medium.com/max/1200/1*ty4NvNrGg4ReETxqU2N3Og.png" alt="VoiPlay.uz" class="h-8 w-auto">
+                    <span class="ml-2 text-xl font-bold text-white hidden sm:inline">VoiPlay</span>
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="/" class="nav-link text-voiplay-primary font-semibold">
+                    Bosh Sahifa
+                </a>
+                <a href="/anime.php" class="nav-link text-gray-300 hover:text-white">
+                    Anime
+                </a>
+                <a href="/trending.php" class="nav-link text-gray-300 hover:text-white">
+                    Trendda
+                </a>
+                <a href="/episode.php" class="nav-link text-gray-300 hover:text-white">
+                    Yangi Qismlar
+                </a>
+                <a href="/news.php" class="nav-link text-gray-300 hover:text-white">
+                    Yangiliklar
+                </a>
+            </div>
+
+            <!-- Search and User -->
+            <div class="flex items-center space-x-4">
+                <button id="searchToggle" class="text-gray-300 hover:text-white focus:outline-none">
+                    <i class="fas fa-search"></i>
+                </button>
+                
+                                    <div class="relative group">
+                        <button class="flex items-center space-x-2 focus:outline-none">
+                            <img src="avatars/admin.jpg" 
+                                 alt="Profile" 
+                                 class="w-8 h-8 rounded-full object-cover border-2 border-transparent group-hover:border-voiplay-primary">
+                            <span class="text-white hidden lg:inline">admin</span>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50 hidden group-hover:block">
+                            <a href="/profile.php" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Profil</a>
+                            <a href="/watchlist.php" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Kuzatuv ro'yxati</a>
+                            <a href="/settings.php" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Sozlamalar</a>
+                            <div class="border-t border-gray-700"></div>
+                            <a href="/logout.php" class="block px-4 py-2 text-sm text-red-400 hover:bg-gray-700">Chiqish</a>
+                        </div>
+                    </div>
+                            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="flex md:hidden">
+                <button id="mobileMenuButton" class="text-gray-300 hover:text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-gray-900">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="/" class="mobile-nav-link bg-gray-800 text-white block px-3 py-2 rounded-md text-base font-medium">
+                Bosh Sahifa
+            </a>
+            <a href="/anime.php" class="mobile-nav-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Anime
+            </a>
+            <a href="/trending.php" class="mobile-nav-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Trendda
+            </a>
+            <a href="/episode.php" class="mobile-nav-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Yangi Qismlar
+            </a>
+            <a href="/news.php" class="mobile-nav-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Yangiliklar
+            </a>
+        </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div id="searchBar" class="hidden absolute top-16 left-0 right-0 bg-gray-900 py-3 px-4 shadow-lg">
+        <div class="container mx-auto">
+            <form action="/search.php" method="GET" class="relative">
+                <input type="text" name="q" placeholder="Anime, serial yoki kinolar qidirish..." 
+                       class="w-full bg-gray-800 text-white px-4 py-3 rounded-lg pl-12 focus:outline-none focus:ring-2 focus:ring-voiplay-primary">
+                <button type="submit" class="absolute left-3 top-3 text-gray-400 hover:text-white">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Search toggle
+        const searchToggle = document.getElementById('searchToggle');
+        const searchBar = document.getElementById('searchBar');
+        
+        searchToggle.addEventListener('click', function() {
+            searchBar.classList.toggle('hidden');
+            if (!searchBar.classList.contains('hidden')) {
+                searchBar.querySelector('input').focus();
+            }
+        });
+
+        // Close search when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!searchBar.contains(e.target) && e.target !== searchToggle) {
+                searchBar.classList.add('hidden');
+            }
+        });
+    });
+</script>
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative h-screen max-h-[800px] bg-gradient-to-r from-black to-transparent">
+            <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
+            <div class="absolute inset-0 z-0">
+                <img src="https://wallpapers.com/images/featured/anime-all-characters-hd-4r9pb6ju4v1b0m48.jpg" alt="Hero Banner" class="w-full h-full object-cover">
+            </div>
+            
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center relative z-20">
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        Sevimli Anime va Seriallaringizni Tomosha Qiling
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                        O'zbek tilida eng yangi va mashhur kontentlar faqat VoiPlay'da. HD sifat, bepul va pullik variantlar.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="/signup.php" class="bg-voiplay-primary hover:bg-voiplay-primary-dark text-white px-8 py-3 rounded-lg text-lg font-semibold text-center transition-colors">
+                            Boshlash - Bepul
+                        </a>
+                        <a href="/pricing.php" class="bg-white hover:bg-gray-200 text-black px-8 py-3 rounded-lg text-lg font-semibold text-center transition-colors">
+                            Premiumga O'tish
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trending Now -->
+        <section class="py-12 bg-gradient-to-b from-black to-voiplay-secondary">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-2xl sm:text-3xl font-bold">
+                        <span class="text-voiplay-primary">Hozir</span> Trendda
+                    </h2>
+                    <a href="/trending.php" class="text-gray-400 hover:text-white text-sm font-medium flex items-center transition-colors">
+                        Barchasini ko'rish <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+                                    </div>
+            </div>
+        </section>
+
+        <!-- Recently Added Anime -->
+        <section class="py-12 bg-voiplay-secondary">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-2xl sm:text-3xl font-bold">
+                        Yangi <span class="text-voiplay-primary">Qo'shilgan</span> Anime
+                    </h2>
+                    <a href="/anime-details.php?sort=newest" class="text-gray-400 hover:text-white text-sm font-medium flex items-center transition-colors">
+                        Barchasini ko'rish <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+                                            <div class="group relative">
+                            <a href="/anime-details.php?id=anime-0001" class="block">
+                                <div class="aspect-w-2 aspect-h-3 rounded-lg overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BNTk3MDA1ZjAtNTRhYS00YzNiLTgwOGEtYWRmYTQ3NjA0NTAwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+                                         alt="Naruto: Shippuden" 
+                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    
+                                    <!-- Episode count badge -->
+                                    <div class="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
+                                        3 qism
+                                    </div>
+                                    
+                                    <!-- Premium badge -->
+                                                                        
+                                    <!-- Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+                                        <h3 class="text-white font-semibold text-sm line-clamp-2">Naruto: Shippuden</h3>
+                                        <div class="flex items-center justify-between mt-1">
+                                            <span class="text-gray-300 text-xs">2007</span>
+                                            <div class="flex items-center">
+                                                <span class="text-amber-400 text-xs font-semibold mr-1">
+                                                    2.0                                                </span>
+                                                <i class="fas fa-star text-amber-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="group relative">
+                            <a href="/anime-details.php?id=anime-0002" class="block">
+                                <div class="aspect-w-2 aspect-h-3 rounded-lg overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BZjliODY5MzQtMmViZC00MTZmLWFhMWMtMjMwM2I3OGY1MTRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+                                         alt="Attack on Titan" 
+                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    
+                                    <!-- Episode count badge -->
+                                    <div class="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
+                                        3 qism
+                                    </div>
+                                    
+                                    <!-- Premium badge -->
+                                                                            <div class="absolute top-2 left-2 bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded flex items-center">
+                                            <i class="fas fa-crown mr-1"></i> Premium
+                                        </div>
+                                                                        
+                                    <!-- Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+                                        <h3 class="text-white font-semibold text-sm line-clamp-2">Attack on Titan</h3>
+                                        <div class="flex items-center justify-between mt-1">
+                                            <span class="text-gray-300 text-xs">2013</span>
+                                            <div class="flex items-center">
+                                                <span class="text-amber-400 text-xs font-semibold mr-1">
+                                                    9.0                                                </span>
+                                                <i class="fas fa-star text-amber-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="group relative">
+                            <a href="/anime-details.php?id=anime-0003" class="block">
+                                <div class="aspect-w-2 aspect-h-3 rounded-lg overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BMGVhZTY1YTctOWJlYS00MjcxLTlkNDgtYTUxZTM5MzMzZjI2XkEyXkFqcGc@._V1_.jpg" 
+                                         alt="Demon Slayer" 
+                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    
+                                    <!-- Episode count badge -->
+                                    <div class="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
+                                        3 qism
+                                    </div>
+                                    
+                                    <!-- Premium badge -->
+                                                                        
+                                    <!-- Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+                                        <h3 class="text-white font-semibold text-sm line-clamp-2">Demon Slayer</h3>
+                                        <div class="flex items-center justify-between mt-1">
+                                            <span class="text-gray-300 text-xs">2019</span>
+                                            <div class="flex items-center">
+                                                <span class="text-amber-400 text-xs font-semibold mr-1">
+                                                    8.9                                                </span>
+                                                <i class="fas fa-star text-amber-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="group relative">
+                            <a href="/anime-details.php?id=anime-0004" class="block">
+                                <div class="aspect-w-2 aspect-h-3 rounded-lg overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BNmI1MmYxNWQtY2E5NC00ZTlmLWIzZGEtNzM1YmE3NDA5NzhjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+                                         alt="Jujutsu Kaisen" 
+                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    
+                                    <!-- Episode count badge -->
+                                    <div class="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
+                                        0 qism
+                                    </div>
+                                    
+                                    <!-- Premium badge -->
+                                                                            <div class="absolute top-2 left-2 bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded flex items-center">
+                                            <i class="fas fa-crown mr-1"></i> Premium
+                                        </div>
+                                                                        
+                                    <!-- Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+                                        <h3 class="text-white font-semibold text-sm line-clamp-2">Jujutsu Kaisen</h3>
+                                        <div class="flex items-center justify-between mt-1">
+                                            <span class="text-gray-300 text-xs">2020</span>
+                                            <div class="flex items-center">
+                                                <span class="text-amber-400 text-xs font-semibold mr-1">
+                                                    8.8                                                </span>
+                                                <i class="fas fa-star text-amber-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="group relative">
+                            <a href="/anime-details.php?id=anime-0005" class="block">
+                                <div class="aspect-w-2 aspect-h-3 rounded-lg overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BMTNjNGU4NTUtYmVjMy00YjRiLTkxMWUtNzZkMDNiYjZhNmViXkEyXkFqcGc@._V1_.jpg" 
+                                         alt="One Piece" 
+                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    
+                                    <!-- Episode count badge -->
+                                    <div class="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
+                                        0 qism
+                                    </div>
+                                    
+                                    <!-- Premium badge -->
+                                                                        
+                                    <!-- Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+                                        <h3 class="text-white font-semibold text-sm line-clamp-2">One Piece</h3>
+                                        <div class="flex items-center justify-between mt-1">
+                                            <span class="text-gray-300 text-xs">1999</span>
+                                            <div class="flex items-center">
+                                                <span class="text-amber-400 text-xs font-semibold mr-1">
+                                                    8.6                                                </span>
+                                                <i class="fas fa-star text-amber-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="group relative">
+                            <a href="/anime-details.php?id=anime-0006" class="block">
+                                <div class="aspect-w-2 aspect-h-3 rounded-lg overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BY2QzODA5OTQtYWJlNi00ZjIzLThhNTItMDMwODhlYzYzMjA2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+                                         alt="My Hero Academia" 
+                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    
+                                    <!-- Episode count badge -->
+                                    <div class="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
+                                        0 qism
+                                    </div>
+                                    
+                                    <!-- Premium badge -->
+                                                                        
+                                    <!-- Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+                                        <h3 class="text-white font-semibold text-sm line-clamp-2">My Hero Academia</h3>
+                                        <div class="flex items-center justify-between mt-1">
+                                            <span class="text-gray-300 text-xs">2016</span>
+                                            <div class="flex items-center">
+                                                <span class="text-amber-400 text-xs font-semibold mr-1">
+                                                    5.0                                                </span>
+                                                <i class="fas fa-star text-amber-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="group relative">
+                            <a href="/anime-details.php?id=anime-0007" class="block">
+                                <div class="aspect-w-2 aspect-h-3 rounded-lg overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+                                    <img src="https://printler.com/media/photo/141583.jpg" 
+                                         alt="Chainsaw Man" 
+                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    
+                                    <!-- Episode count badge -->
+                                    <div class="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
+                                        0 qism
+                                    </div>
+                                    
+                                    <!-- Premium badge -->
+                                                                            <div class="absolute top-2 left-2 bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded flex items-center">
+                                            <i class="fas fa-crown mr-1"></i> Premium
+                                        </div>
+                                                                        
+                                    <!-- Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+                                        <h3 class="text-white font-semibold text-sm line-clamp-2">Chainsaw Man</h3>
+                                        <div class="flex items-center justify-between mt-1">
+                                            <span class="text-gray-300 text-xs">2022</span>
+                                            <div class="flex items-center">
+                                                <span class="text-amber-400 text-xs font-semibold mr-1">
+                                                    9.1                                                </span>
+                                                <i class="fas fa-star text-amber-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="group relative">
+                            <a href="/anime-details.php?id=anime-0008" class="block">
+                                <div class="aspect-w-2 aspect-h-3 rounded-lg overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BZDkwNjc0NWEtNzJlOC00N2YwLTk4MjktZGFlZDE2Y2QzOWI0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+                                         alt="Spy x Family" 
+                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    
+                                    <!-- Episode count badge -->
+                                    <div class="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
+                                        0 qism
+                                    </div>
+                                    
+                                    <!-- Premium badge -->
+                                                                        
+                                    <!-- Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+                                        <h3 class="text-white font-semibold text-sm line-clamp-2">Spy x Family</h3>
+                                        <div class="flex items-center justify-between mt-1">
+                                            <span class="text-gray-300 text-xs">2022</span>
+                                            <div class="flex items-center">
+                                                <span class="text-amber-400 text-xs font-semibold mr-1">
+                                                    8.9                                                </span>
+                                                <i class="fas fa-star text-amber-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="group relative">
+                            <a href="/anime-details.php?id=anime-0009" class="block">
+                                <div class="aspect-w-2 aspect-h-3 rounded-lg overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BNDA3MGNmZTEtMzFiMy00ZmViLThhNmQtMjQ4ZDc5MDEyN2U1XkEyXkFqcGc@._V1_.jpg" 
+                                         alt="Vinland Saga" 
+                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    
+                                    <!-- Episode count badge -->
+                                    <div class="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
+                                        0 qism
+                                    </div>
+                                    
+                                    <!-- Premium badge -->
+                                                                            <div class="absolute top-2 left-2 bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded flex items-center">
+                                            <i class="fas fa-crown mr-1"></i> Premium
+                                        </div>
+                                                                        
+                                    <!-- Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+                                        <h3 class="text-white font-semibold text-sm line-clamp-2">Vinland Saga</h3>
+                                        <div class="flex items-center justify-between mt-1">
+                                            <span class="text-gray-300 text-xs">2019</span>
+                                            <div class="flex items-center">
+                                                <span class="text-amber-400 text-xs font-semibold mr-1">
+                                                    8.8                                                </span>
+                                                <i class="fas fa-star text-amber-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="group relative">
+                            <a href="/anime-details.php?id=anime-0010" class="block">
+                                <div class="aspect-w-2 aspect-h-3 rounded-lg overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BYTgyZDhmMTEtZDFhNi00MTc4LTg3NjUtYWJlNGE5Mzk2NzMxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+                                         alt="Death Note" 
+                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    
+                                    <!-- Episode count badge -->
+                                    <div class="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
+                                        0 qism
+                                    </div>
+                                    
+                                    <!-- Premium badge -->
+                                                                        
+                                    <!-- Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+                                        <h3 class="text-white font-semibold text-sm line-clamp-2">Death Note</h3>
+                                        <div class="flex items-center justify-between mt-1">
+                                            <span class="text-gray-300 text-xs">2006</span>
+                                            <div class="flex items-center">
+                                                <span class="text-amber-400 text-xs font-semibold mr-1">
+                                                    9.0                                                </span>
+                                                <i class="fas fa-star text-amber-400 text-xs"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                    </div>
+            </div>
+        </section>
+
+<!-- Latest Episodes -->
+<section class="py-12 bg-gray-900">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between mb-8">
+            <h2 class="text-2xl sm:text-3xl font-bold">
+                Eng <span class="text-voiplay-primary">Yangi</span> Epizodlar
+            </h2>
+            <a href="/episodes.php" class="text-gray-400 hover:text-white text-sm font-medium flex items-center transition-colors">
+                Barchasini ko'rish <i class="fas fa-chevron-right ml-1 text-xs"></i>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <a href="/watch.php?episode=ep-0001">
+                        <div class="relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BNTk3MDA1ZjAtNTRhYS00YzNiLTgwOGEtYWRmYTQ3NjA0NTAwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+                                 alt="Naruto: Shippuden" 
+                                 class="w-full h-48 object-cover">
+
+                            <!-- Episode number -->
+                            <div class="absolute top-2 left-2 bg-voiplay-primary text-white text-xs font-bold px-2 py-1 rounded">
+                                Yangi                            </div>
+
+                            <!-- Premium overlay -->
+                            
+                            <!-- Play button -->
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                                <div class="bg-voiplay-primary rounded-full w-16 h-16 flex items-center justify-center">
+                                    <i class="fas fa-play text-white text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="p-4">
+                        <h3 class="font-semibold text-white mb-1 line-clamp-1">
+                            <a href="/watch.php?episode=ep-0001">
+                                Naruto: Shippuden                            </a>
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-3 line-clamp-1">
+                            Homecoming                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-500">
+                            <span>13.07.2025</span>
+                            <span>
+                                <i class="fas fa-clock mr-1"></i> 24 daqiqa
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <a href="/watch.php?episode=ep-0002">
+                        <div class="relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BNTk3MDA1ZjAtNTRhYS00YzNiLTgwOGEtYWRmYTQ3NjA0NTAwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+                                 alt="Naruto: Shippuden" 
+                                 class="w-full h-48 object-cover">
+
+                            <!-- Episode number -->
+                            <div class="absolute top-2 left-2 bg-voiplay-primary text-white text-xs font-bold px-2 py-1 rounded">
+                                Yangi                            </div>
+
+                            <!-- Premium overlay -->
+                            
+                            <!-- Play button -->
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                                <div class="bg-voiplay-primary rounded-full w-16 h-16 flex items-center justify-center">
+                                    <i class="fas fa-play text-white text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="p-4">
+                        <h3 class="font-semibold text-white mb-1 line-clamp-1">
+                            <a href="/watch.php?episode=ep-0002">
+                                Naruto: Shippuden                            </a>
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-3 line-clamp-1">
+                            The Akatsuki Makes Its Move                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-500">
+                            <span>13.07.2025</span>
+                            <span>
+                                <i class="fas fa-clock mr-1"></i> 24 daqiqa
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <a href="/watch.php?episode=ep-0003">
+                        <div class="relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BNTk3MDA1ZjAtNTRhYS00YzNiLTgwOGEtYWRmYTQ3NjA0NTAwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+                                 alt="Naruto: Shippuden" 
+                                 class="w-full h-48 object-cover">
+
+                            <!-- Episode number -->
+                            <div class="absolute top-2 left-2 bg-voiplay-primary text-white text-xs font-bold px-2 py-1 rounded">
+                                Yangi                            </div>
+
+                            <!-- Premium overlay -->
+                            
+                            <!-- Play button -->
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                                <div class="bg-voiplay-primary rounded-full w-16 h-16 flex items-center justify-center">
+                                    <i class="fas fa-play text-white text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="p-4">
+                        <h3 class="font-semibold text-white mb-1 line-clamp-1">
+                            <a href="/watch.php?episode=ep-0003">
+                                Naruto: Shippuden                            </a>
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-3 line-clamp-1">
+                            The Results of Training                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-500">
+                            <span>13.07.2025</span>
+                            <span>
+                                <i class="fas fa-clock mr-1"></i> 24 daqiqa
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <a href="/watch.php?episode=ep-0004">
+                        <div class="relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BZjliODY5MzQtMmViZC00MTZmLWFhMWMtMjMwM2I3OGY1MTRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+                                 alt="Attack on Titan" 
+                                 class="w-full h-48 object-cover">
+
+                            <!-- Episode number -->
+                            <div class="absolute top-2 left-2 bg-voiplay-primary text-white text-xs font-bold px-2 py-1 rounded">
+                                Ep 20001                            </div>
+
+                            <!-- Premium overlay -->
+                            
+                            <!-- Play button -->
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                                <div class="bg-voiplay-primary rounded-full w-16 h-16 flex items-center justify-center">
+                                    <i class="fas fa-play text-white text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="p-4">
+                        <h3 class="font-semibold text-white mb-1 line-clamp-1">
+                            <a href="/watch.php?episode=ep-0004">
+                                Attack on Titan                            </a>
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-3 line-clamp-1">
+                            To You, in 2000 Years: The Fall of Shiganshina, Part 1                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-500">
+                            <span>13.07.2025</span>
+                            <span>
+                                <i class="fas fa-clock mr-1"></i> 24 daqiqa
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <a href="/watch.php?episode=ep-0005">
+                        <div class="relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BZjliODY5MzQtMmViZC00MTZmLWFhMWMtMjMwM2I3OGY1MTRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+                                 alt="Attack on Titan" 
+                                 class="w-full h-48 object-cover">
+
+                            <!-- Episode number -->
+                            <div class="absolute top-2 left-2 bg-voiplay-primary text-white text-xs font-bold px-2 py-1 rounded">
+                                Ep 2                            </div>
+
+                            <!-- Premium overlay -->
+                            
+                            <!-- Play button -->
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                                <div class="bg-voiplay-primary rounded-full w-16 h-16 flex items-center justify-center">
+                                    <i class="fas fa-play text-white text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="p-4">
+                        <h3 class="font-semibold text-white mb-1 line-clamp-1">
+                            <a href="/watch.php?episode=ep-0005">
+                                Attack on Titan                            </a>
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-3 line-clamp-1">
+                            That Day: The Fall of Shiganshina, Part 2                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-500">
+                            <span>13.07.2025</span>
+                            <span>
+                                <i class="fas fa-clock mr-1"></i> 24 daqiqa
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <a href="/watch.php?episode=ep-0006">
+                        <div class="relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BZjliODY5MzQtMmViZC00MTZmLWFhMWMtMjMwM2I3OGY1MTRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+                                 alt="Attack on Titan" 
+                                 class="w-full h-48 object-cover">
+
+                            <!-- Episode number -->
+                            <div class="absolute top-2 left-2 bg-voiplay-primary text-white text-xs font-bold px-2 py-1 rounded">
+                                Ep 1                            </div>
+
+                            <!-- Premium overlay -->
+                            
+                            <!-- Play button -->
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                                <div class="bg-voiplay-primary rounded-full w-16 h-16 flex items-center justify-center">
+                                    <i class="fas fa-play text-white text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="p-4">
+                        <h3 class="font-semibold text-white mb-1 line-clamp-1">
+                            <a href="/watch.php?episode=ep-0006">
+                                Attack on Titan                            </a>
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-3 line-clamp-1">
+                            A Dim Light Amid Despair: Humanity&#039;s Comeback, Part 1                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-500">
+                            <span>13.07.2025</span>
+                            <span>
+                                <i class="fas fa-clock mr-1"></i> 24 daqiqa
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <a href="/watch.php?episode=ep-0007">
+                        <div class="relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMGVhZTY1YTctOWJlYS00MjcxLTlkNDgtYTUxZTM5MzMzZjI2XkEyXkFqcGc@._V1_.jpg" 
+                                 alt="Demon Slayer" 
+                                 class="w-full h-48 object-cover">
+
+                            <!-- Episode number -->
+                            <div class="absolute top-2 left-2 bg-voiplay-primary text-white text-xs font-bold px-2 py-1 rounded">
+                                Yangi                            </div>
+
+                            <!-- Premium overlay -->
+                            
+                            <!-- Play button -->
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                                <div class="bg-voiplay-primary rounded-full w-16 h-16 flex items-center justify-center">
+                                    <i class="fas fa-play text-white text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="p-4">
+                        <h3 class="font-semibold text-white mb-1 line-clamp-1">
+                            <a href="/watch.php?episode=ep-0007">
+                                Demon Slayer                            </a>
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-3 line-clamp-1">
+                            Cruelty                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-500">
+                            <span>13.07.2025</span>
+                            <span>
+                                <i class="fas fa-clock mr-1"></i> 24 daqiqa
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <a href="/watch.php?episode=ep-0008">
+                        <div class="relative">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMGVhZTY1YTctOWJlYS00MjcxLTlkNDgtYTUxZTM5MzMzZjI2XkEyXkFqcGc@._V1_.jpg" 
+                                 alt="Demon Slayer" 
+                                 class="w-full h-48 object-cover">
+
+                            <!-- Episode number -->
+                            <div class="absolute top-2 left-2 bg-voiplay-primary text-white text-xs font-bold px-2 py-1 rounded">
+                                Yangi                            </div>
+
+                            <!-- Premium overlay -->
+                            
+                            <!-- Play button -->
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                                <div class="bg-voiplay-primary rounded-full w-16 h-16 flex items-center justify-center">
+                                    <i class="fas fa-play text-white text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="p-4">
+                        <h3 class="font-semibold text-white mb-1 line-clamp-1">
+                            <a href="/watch.php?episode=ep-0008">
+                                Demon Slayer                            </a>
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-3 line-clamp-1">
+                            Trainer Sakonji Urokodaki                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-500">
+                            <span>13.07.2025</span>
+                            <span>
+                                <i class="fas fa-clock mr-1"></i> 24 daqiqa
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+    </div>
+</section>
+        <!-- Popular Genres -->
+        <section class="py-12 bg-voiplay-secondary">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-8">
+                    Mashhur <span class="text-voiplay-primary">Janrlar</span>
+                </h2>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                                            <a href="/anime.php?genre=Action" 
+                           class="bg-gray-800 hover:bg-gray-700 rounded-lg p-4 text-center transition-colors">
+                            <h3 class="font-semibold text-white">Action</h3>
+                            <p class="text-gray-400 text-sm mt-1">9 ta anime</p>
+                        </a>
+                                            <a href="/anime.php?genre=Fantasy" 
+                           class="bg-gray-800 hover:bg-gray-700 rounded-lg p-4 text-center transition-colors">
+                            <h3 class="font-semibold text-white">Fantasy</h3>
+                            <p class="text-gray-400 text-sm mt-1">3 ta anime</p>
+                        </a>
+                                            <a href="/anime.php?genre=Adventure" 
+                           class="bg-gray-800 hover:bg-gray-700 rounded-lg p-4 text-center transition-colors">
+                            <h3 class="font-semibold text-white">Adventure</h3>
+                            <p class="text-gray-400 text-sm mt-1">2 ta anime</p>
+                        </a>
+                                            <a href="/anime.php?genre=Drama" 
+                           class="bg-gray-800 hover:bg-gray-700 rounded-lg p-4 text-center transition-colors">
+                            <h3 class="font-semibold text-white">Drama</h3>
+                            <p class="text-gray-400 text-sm mt-1">2 ta anime</p>
+                        </a>
+                                            <a href="/anime.php?genre=Comedy" 
+                           class="bg-gray-800 hover:bg-gray-700 rounded-lg p-4 text-center transition-colors">
+                            <h3 class="font-semibold text-white">Comedy</h3>
+                            <p class="text-gray-400 text-sm mt-1">2 ta anime</p>
+                        </a>
+                                            <a href="/anime.php?genre=Supernatural" 
+                           class="bg-gray-800 hover:bg-gray-700 rounded-lg p-4 text-center transition-colors">
+                            <h3 class="font-semibold text-white">Supernatural</h3>
+                            <p class="text-gray-400 text-sm mt-1">2 ta anime</p>
+                        </a>
+                                            <a href="/anime.php?genre=Horror" 
+                           class="bg-gray-800 hover:bg-gray-700 rounded-lg p-4 text-center transition-colors">
+                            <h3 class="font-semibold text-white">Horror</h3>
+                            <p class="text-gray-400 text-sm mt-1">2 ta anime</p>
+                        </a>
+                                            <a href="/anime.php?genre=Mystery" 
+                           class="bg-gray-800 hover:bg-gray-700 rounded-lg p-4 text-center transition-colors">
+                            <h3 class="font-semibold text-white">Mystery</h3>
+                            <p class="text-gray-400 text-sm mt-1">1 ta anime</p>
+                        </a>
+                                            <a href="/anime.php?genre=School" 
+                           class="bg-gray-800 hover:bg-gray-700 rounded-lg p-4 text-center transition-colors">
+                            <h3 class="font-semibold text-white">School</h3>
+                            <p class="text-gray-400 text-sm mt-1">1 ta anime</p>
+                        </a>
+                                            <a href="/anime.php?genre=Slice+of+Life" 
+                           class="bg-gray-800 hover:bg-gray-700 rounded-lg p-4 text-center transition-colors">
+                            <h3 class="font-semibold text-white">Slice of Life</h3>
+                            <p class="text-gray-400 text-sm mt-1">1 ta anime</p>
+                        </a>
+                                    </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-16 bg-gradient-to-r from-voiplay-primary to-voiplay-primary-dark">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
+                    Premium Obunaga Ega Bo'ling
+                </h2>
+                <p class="text-lg text-white mb-8 max-w-2xl mx-auto">
+                    Reklamasiz, HD sifatda, barcha pullik kontentlarni cheklanmagan tomosha qiling.
+                </p>
+                <a href="/pricing.php" class="inline-block bg-black hover:bg-gray-900 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+                    Premiumga O'tish
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 pt-16 pb-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- About Section -->
+            <div class="lg:col-span-2">
+                <div class="flex items-center mb-4">
+                    <img src="/assets/images/logo.png" alt="VoiPlay.uz" class="h-8 w-auto">
+                    <span class="ml-2 text-xl font-bold text-white">VoiPlay</span>
+                </div>
+                <p class="text-sm mb-4">
+                    VoiPlay - O'zbek tilidagi eng yirik anime va seriallar platformasi. Bizda eng yangi va mashhur kontentlarni HD sifatda tomosha qiling.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-telegram fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-youtube fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Tez Havolalar</h3>
+                <ul class="space-y-2">
+                    <li><a href="/" class="hover:text-voiplay-primary transition-colors">Bosh Sahifa</a></li>
+                    <li><a href="/anime.php" class="hover:text-voiplay-primary transition-colors">Anime</a></li>
+                    <li><a href="/trending.php" class="hover:text-voiplay-primary transition-colors">Trendda</a></li>
+                    <li><a href="/genres.php" class="hover:text-voiplay-primary transition-colors">Janrlar</a></li>
+                    <li><a href="/news.php" class="hover:text-voiplay-primary transition-colors">Yangiliklar</a></li>
+                </ul>
+            </div>
+
+            <!-- Help & Legal -->
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Yordam</h3>
+                <ul class="space-y-2">
+                    <li><a href="/help.php" class="hover:text-voiplay-primary transition-colors">Yordam Markazi</a></li>
+                    <li><a href="/contact.php" class="hover:text-voiplay-primary transition-colors">Bog'lanish</a></li>
+                    <li><a href="/pricing.php" class="hover:text-voiplay-primary transition-colors">Tariflar</a></li>
+                    <li><a href="/privacy.php" class="hover:text-voiplay-primary transition-colors">Maxfiylik Siyosati</a></li>
+                    <li><a href="/terms.php" class="hover:text-voiplay-primary transition-colors">Foydalanish Shartlari</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="md:col-span-2 lg:col-span-1">
+                <h3 class="text-lg font-semibold text-white mb-4">Yangiliklardan Xabardor Bo'ling</h3>
+                <form class="space-y-3">
+                    <input type="email" placeholder="Email manzilingiz" 
+                           class="w-full px-4 py-2 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-voiplay-primary">
+                    <button type="submit" class="bg-voiplay-primary hover:bg-voiplay-primary-dark text-white px-4 py-2 rounded-lg w-full transition-colors">
+                        Obuna Bo'lish
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-sm mb-4 md:mb-0">
+                &copy; 2025 VoiPlay.uz. Barcha huquqlar himoyalangan.
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-sm hover:text-voiplay-primary transition-colors">Cookie Settings</a>
+                <a href="#" class="text-sm hover:text-voiplay-primary transition-colors">Privacy Policy</a>
+                <a href="#" class="text-sm hover:text-voiplay-primary transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-xl opacity-0 transition-opacity duration-300 pointer-events-none flex items-center gap-2 z-50 border-l-4 border-voiplay-primary">
+        <i class="fas fa-info-circle"></i>
+        <span id="toast-message"></span>
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+    <script>
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate elements on scroll
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.group');
+                
+                elements.forEach((element, index) => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 100) {
+                        setTimeout(() => {
+                            element.style.opacity = '1';
+                            element.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    }
+                });
+            };
+
+            // Initial check
+            animateOnScroll();
+            
+            // Check on scroll
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // Show toast if there's a message
+                    });
+
+        // Show toast function
+        function showToast(message, type = 'info') {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            
+            toastMessage.textContent = message;
+            
+            // Set icon based on type
+            const icon = toast.querySelector('i');
+            if (type === 'error') {
+                icon.className = 'fas fa-exclamation-circle';
+                toast.classList.remove('border-voiplay-primary');
+                toast.classList.add('border-red-500');
+            } else if (type === 'success') {
+                icon.className = 'fas fa-check-circle';
+                toast.classList.remove('border-voiplay-primary');
+                toast.classList.add('border-green-500');
+            } else {
+                icon.className = 'fas fa-info-circle';
+                toast.classList.remove('border-red-500', 'border-green-500');
+                toast.classList.add('border-voiplay-primary');
+            }
+            
+            toast.classList.remove('opacity-0');
+            toast.classList.add('opacity-100');
+            
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
