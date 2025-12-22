@@ -2,7 +2,7 @@ name: voiplaytv
 description: "VoiPlay Tv - Eng songi animelar"
 publish_to: 'none'
 
-version: 1.0.4+16 # bumped to ensure Play release versionCode > 12 so users can upgrade
+version: 1.0.5+18 # bumped to ensure Play release versionCode > 12 so users can upgrade
 
 environment:
   sdk: ">=3.2.0 <4.0.0"
