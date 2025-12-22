@@ -1,0 +1,44 @@
+name: voiplaytv
+description: "VoiPlay Tv - Eng songi animelar"
+publish_to: 'none'
+
+version: 1.0.4+16 # bumped to ensure Play release versionCode > 12 so users can upgrade
+
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  http: ^1.3.0
+  provider: ^6.1.2
+  flutter_secure_storage: ^9.2.2
+  shared_preferences: ^2.3.5
+  cached_network_image: ^3.4.1
+  carousel_slider: ^5.0.0
+  url_launcher: ^6.3.1
+  webview_flutter: ^4.10.0
+  webview_flutter_web: ^0.2.3+4
+  connectivity_plus: ^6.1.3
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  intl: ^0.20.2
+  share_plus: ^10.1.4
+  video_player: ^2.6.1
+  chewie: ^1.6.5
+  flutter_cache_manager: ^3.3.0
+
+dev_dependencies:
+  lints: ^4.0.0
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  build_runner: ^2.4.14
+
+flutter:
+  uses-material-design: true
+
+  # assets:
+  #   - assets/images/
