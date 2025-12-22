@@ -183,7 +183,7 @@
     },
     {
       "name": "device_info_plus",
-      "rootUri": "file:///C:/Users/diyor/AppData/Local/Pub/Cache/hosted/pub.dev/device_info_plus-12.3.0",
+      "rootUri": "file:///C:/Users/diyor/AppData/Local/Pub/Cache/hosted/pub.dev/device_info_plus-11.5.0",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -231,9 +231,9 @@
     },
     {
       "name": "flutter_lints",
-      "rootUri": "file:///C:/Users/diyor/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-4.0.0",
+      "rootUri": "file:///C:/Users/diyor/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-5.0.0",
       "packageUri": "lib/",
-      "languageVersion": "3.1"
+      "languageVersion": "3.5"
     },
     {
       "name": "flutter_secure_storage",
@@ -375,9 +375,9 @@
     },
     {
       "name": "lints",
-      "rootUri": "file:///C:/Users/diyor/AppData/Local/Pub/Cache/hosted/pub.dev/lints-4.0.0",
+      "rootUri": "file:///C:/Users/diyor/AppData/Local/Pub/Cache/hosted/pub.dev/lints-5.1.1",
       "packageUri": "lib/",
-      "languageVersion": "3.1"
+      "languageVersion": "3.6"
     },
     {
       "name": "logging",
