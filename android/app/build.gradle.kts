@@ -24,6 +24,7 @@ android {
     defaultConfig {
         applicationId = "uz.voiplay.tv"
         minSdk = 24
+        minSdkVersion 24  // 23 dan 24 ga ko'taring
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
