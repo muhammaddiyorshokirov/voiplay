@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "1007546827704",
+    "project_id": "voiplay",
+    "storage_bucket": "voiplay.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007546827704:android:1d1c28987ca9688366454d",
+        "android_client_info": {
+          "package_name": "co.median.android.jrbaad"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcWcfcbdE6dpgxRFf8J62JVPX052TPa64"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007546827704:android:9f5448f57a9ae17c66454d",
+        "android_client_info": {
+          "package_name": "uz.voiplay.tv"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcWcfcbdE6dpgxRFf8J62JVPX052TPa64"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007546827704:android:deab24263ee9378e66454d",
+        "android_client_info": {
+          "package_name": "uz.voiplay.uz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcWcfcbdE6dpgxRFf8J62JVPX052TPa64"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
