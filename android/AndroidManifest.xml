@@ -5,4 +5,9 @@
 
     <!-- The real app manifest is under app/src/main/AndroidManifest.xml -->
 
+    <application>
+        <!-- Indicates this project uses the Android v2 Flutter embedding. -->
+        <meta-data android:name="flutterEmbedding" android:value="2" />
+    </application>
+
 </manifest>
