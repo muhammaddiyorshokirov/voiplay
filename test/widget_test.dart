@@ -8,7 +8,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:uz_voiplay_tv/main.dart';
+// ESKI: import 'package:uz_voiplay_tv/main.dart';
+import 'package:uz_voiplay_tv/main.dart'; // YANGI: pubspec.yaml dagi name ga mos bo'lishi kerak
+
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
