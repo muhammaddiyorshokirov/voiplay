@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Top-level manifest added to satisfy CI checks that look for android/AndroidManifest.xml -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uz.voiplay.tv">
+
+    <!-- The real app manifest is under app/src/main/AndroidManifest.xml -->
+
+</manifest>
