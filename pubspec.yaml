@@ -16,7 +16,7 @@ dependencies:
 
   # Networking & caching
   dio: ^5.4.3
-  dio_cache_interceptor: ^4.2.8
+  dio_cache_interceptor: 4.0.5
 
   # Auth & storage
   flutter_secure_storage: ^9.2.2

@@ -22,8 +22,10 @@ void main() async {
 
   // Initialize OneSignal if App ID is set
   if (AppConfig.oneSignalAppId.isNotEmpty) {
-    OneSignal.shared.setAppId(AppConfig.oneSignalAppId);
-    OneSignal.shared.setNotificationOpenedHandler((event) {
+    // Initialize OneSignal (v5+ API)
+    OneSignal.initialize(AppConfig.oneSignalAppId);
+    // Notification click handler
+    OneSignal.Notifications.addClickListener((event) {
       // Try to navigate based on notification additional data
       final additional = event.notification.additionalData;
       if (additional != null) {
@@ -48,17 +50,13 @@ void main() async {
 
     // Register device with backend (best-effort)
     try {
-      final deviceState = await OneSignal.shared.getDeviceState();
-      final osUserId = deviceState?.userId;
-      if (osUserId != null) {
+      // In OneSignal v5+, use pushSubscription to get the device id
+      final osUserId = OneSignal.User.pushSubscription.id;
+      if (osUserId != null && osUserId.isNotEmpty) {
         try {
           await ApiClient().dio.post(
             '/devices',
-            data: {
-              'onesignal_id': osUserId,
-              // If device state API changes, we always report mobile for devices with a userId
-              'platform': 'mobile',
-            },
+            data: {'onesignal_id': osUserId, 'platform': 'mobile'},
           );
         } catch (_) {
           // ignore backend registration errors
